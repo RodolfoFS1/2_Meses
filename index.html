@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2 Meses 💙</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0f0f0f, #2c2c2c); /* Oscuro rockero */
+      font-family: 'Georgia', serif;
+      color: #f1f1f1;
+    }
+
+    /* Contenedor */
+    .container {
+      position: relative;
+      text-align: center;
+    }
+
+    /* Sobre */
+    .envelope {
+      width: 150px;
+      height: 100px;
+      background: #8b0000; 
+      position: relative;
+      margin: 0 auto;
+      cursor: pointer;
+      border-radius: 5px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.7);
+      animation: float 2s ease-in-out infinite;
+    }
+
+    .envelope:before, .envelope:after {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 50px 75px 0 75px;
+      top: 0;
+      left: 0;
+    }
+
+    .envelope:before {
+      border-color: #a52a2a transparent transparent transparent; 
+    }
+
+    .envelope:after {
+      border-width: 0 75px 50px 75px;
+      border-color: transparent transparent #8b0000 transparent;
+      top: auto;
+      bottom: 0;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Carta */
+      /* Carta */
+  .letter {
+    display: none;
+    max-width: 90%;
+    width: 420px; 
+    max-height: 80vh; /* altura máxima 80% de la pantalla */
+    padding: 20px;
+    background: darkslategrey;
+    color: #f1f1f1;
+    border-radius: 10px;
+    border: 4px solid gold; /* Marco dorado */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.8);
+    margin: 0 auto;
+    animation: fadeIn 2s forwards;
+    overflow-y: auto; /* scroll vertical si es necesario */
+  }
+
+  /* Opcional: para que el scroll no se vea feo */
+  .letter::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .letter::-webkit-scrollbar-thumb {
+    background-color: gold;
+    border-radius: 3px;
+  }
+
+  .letter::-webkit-scrollbar-track {
+    background: darkslategrey;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+      color: fuchsia; 
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* Estilo corazones */
+    .heart {
+      color: lightblue;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="envelope" id="envelope"></div>
+    <div class="letter" id="letter">
+      <h1>Necesitas saberlo <span class="heart">💙</span></h1>
+      <p>
+        Amor...en este tiempo me has hecho más feliz de lo que imaginé.  
+        Gracias por ser como eres, por compartir tu música, tu risa,
+	    tus miedos, vivencias, sueños, inseguridades, experiencias, tu
+	    vida y tu corazón conmigo.  
+        Me has enseñado muchas cosas en tan poco tiempo, la verdad ni 
+        el tiempo ni las palabras me alcanzan para describir todo el 
+	    amor, admiración, respeto y aprecio que siento por ti, todo lo
+	    que siente mi corazón por ti.
+	    Espero te guste este pequeño detalle así como a mi me ha gustado
+	    (encantado en realidad), pasar estos últimos meses a tu lado.
+	    Aprender de ti, aprender a estar contigo de mil formas, aprender
+	    a amarte, a cuidarte y a protegerte.
+	    Hemos pasado en este tiempo por diferentes clases de momentos y 
+	    experiencias que nos han enseñado varias cosas y de las más importantes
+	    son que nos tenemos el uno al otro, en las buenas y en las malas y que
+        nos amamos muchisimo, 
+	    amo la idea de saber que eres mi familia y que tengo a una mujer
+	    tan maravillosa, única e inigualable a mi lado.
+	    Enserio al igual que con mis sentimientos...las palabras sobran y 
+	    el tiempo falta para describir lo maravillosa que eres.
+	    Eres grande mi amor, eres increíble, eres talentosa, eres única,
+	    eres maravillosa, eres mi novia, mi familia y yo soy tanto tu novio
+	    como tu familia también. Tienes detrás de ti a un hombre dispuesto 
+	    a darlo todo con tal de verte feliz y con tal de protegerte, con tal
+	    de verte sonreír y con tal de poder regalarte un abrazo.
+	    Gracias por estos dos meses tan únicos e inigualables mi amor, así 
+	    como tú. 
+        ¡Vamos por muchos meses y años más! <span class="heart">💙</span>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      const envelope = document.getElementById("envelope");
+      const letter = document.getElementById("letter");
+
+      envelope.style.display = "none";  
+      letter.style.display = "block";  
+    }, 3000); 
+  </script>
+</body>
+</html>
